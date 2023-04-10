@@ -1,0 +1,258 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+img {
+  width: 100% !important;
+}
+
+h2 {
+  text-align: center;
+  margin: 1.5em;
+  font-size: 1.25em;
+  font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #303030;
+}
+
+#map {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  padding: auto;
+}
+
+#loc {
+  margin: 1.5em;
+  padding: 1.5em;
+}
+
+#containerimage {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#containerimageprofile {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#profiledata {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.appHolder {
+  /* width: 90% !important; */
+  margin: auto !important;
+  position: relative !important;
+  /* padding: 10px 20px; */
+}
+
+.main-header {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.btnHolder {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0px 0px 1px grey;
+  border-radius: 20px;
+  /* width: calc(100% / 3); */
+}
+
+.cardHolder, .cardHolderCloud, .cardHolderHome {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.imgHolder {
+  width: 100%;
+  padding: 10px;
+}
+
+.textHolder {
+  width: 100%;
+  padding: 10px;
+  align-self: center;
+  text-align: justify;
+}
+
+.open {
+  display: block;
+}
+
+.emphasis {
+  font-weight: 400;
+}
+
+.footer {
+  background-color: #ffffff !important;
+  padding: 10px;
+}
+
+.close {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  -webkit-animation-name: fadeIn;
+  /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* test */
+
+#cover-spin {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(236, 236, 236, 0.7);
+  z-index: 9999;
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#cover-spin.show {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 48%;
+  top: 40%;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-color: black;
+  border-top-color: transparent;
+  border-width: 4px;
+  border-radius: 50%;
+  -webkit-animation: spin 0.8s linear infinite;
+  animation: spin 0.8s linear infinite;
+}
+
+.footer {
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+/* end of test */
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  width: 25%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 786px) and (min-width: 481px) {
+  .modal-content {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
